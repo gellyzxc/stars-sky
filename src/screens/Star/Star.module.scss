@@ -1,6 +1,10 @@
 ._ {
-  animation: wakeup 400ms ease 0s 1 normal forwards;
   animation: life 2s ease 0s infinite normal forwards;
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .IconStar {
@@ -9,30 +13,15 @@
 
 @keyframes life {
   0% {
-    opacity: 1;
+    transform: scale(1);
+    filter: blur(4px);
   }
-
   50% {
-    opacity: 0.2;
+    transform: scale(0.2);
+    filter: blur(4px);
   }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes wakeup {
-  0% {
-    transform: scale(0.5);
-  }
-
-  50% {
-    transform: scale(2);
-    height: 23px;
-    width: 23px;
-  }
-
   100% {
     transform: scale(1);
+    filter: blur(4px);
   }
 }

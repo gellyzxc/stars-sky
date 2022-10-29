@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from "./Star.module.scss";
-import {ReactComponent as IconStar} from "../../icons/Star.svg";
+import { ReactComponent as IconStar } from "../../icons/Star.svg";
 
 const ViewStar = (props) => {
-    const {} = props;
+    const { star, isView } = props;
     return (
-    <div className={styles._}>
-        <IconStar width={24} height={24} className={styles.IconStar}/>
-    </div>
+        isView && (
+                <div className={styles._} style={
+                    {
+                        top: star.top,
+                        left: star.left,
+                    }
+                }>
+                    {/* <IconStar width={24} height={24} className={styles.IconStar}/> */}
+                </div>
+        )
     );
 };
 

@@ -2,9 +2,9 @@ import React from 'react';
 import ViewStar from "./viewStar";
 import useStar from "./useStar";
 
-const Star = () => {
+const Star = ({star}) => {
     return (
-            <ViewStar {...useStar()} />
+            <ViewStar {...useStar(star)} />
     );
 };
 

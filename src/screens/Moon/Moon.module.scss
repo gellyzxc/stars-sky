@@ -1,8 +1,25 @@
 ._ {
+  animation: life 6s ease 0s infinite normal forwards;
   height: 72px;
   width: 72px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 666;
 }
 
 .IconMoon {
   fill: #ffc107;
+}
+
+@keyframes life {
+  0% {
+    filter: blur(4px) brightness(100%);
+  }
+  50% {
+    filter: blur(4px) brightness(150%);
+  }
+  100% {
+    filter: blur(4px) brightness(100%);
+  }
 }
