@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react";
 import { getRandomInt } from "../../functions/function";
 
-const UseStar = (star) => {
+export interface IStarViewProps {
+  star: any;
+  isView: boolean;
+}
+
+export interface IStarProps {
+  star: any;
+}
+
+
+const UseStar = (props: IStarProps): IStarViewProps => {
 const [isView, setIsView] = useState(false);
 
 useEffect(() => {
@@ -19,7 +29,7 @@ useEffect(() => {
 }, []);
 
     return {
-        star,
+        star: props.star,
         isView,
     };
 };

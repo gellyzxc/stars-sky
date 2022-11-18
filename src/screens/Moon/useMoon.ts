@@ -1,6 +1,8 @@
-import React from 'react';
+export interface IMoonProps {
 
-const UseMoon = () => {
+}
+
+const UseMoon = (): IMoonProps => {
     return (
         {
 

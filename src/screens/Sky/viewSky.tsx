@@ -2,8 +2,9 @@ import React, {useEffect, useState} from 'react';
 import {Moon} from "../Moon";
 import styles from "./Sky.module.scss"
 import {Star} from "../Star";
+import { ISkyProps } from './useSky';
 
-const ViewSky = (props) => {
+const ViewSky = (props: ISkyProps) => {
     const {
         stars,
         changeSky

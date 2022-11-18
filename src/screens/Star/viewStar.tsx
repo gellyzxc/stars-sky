@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from "./Star.module.scss";
 import { ReactComponent as IconStar } from "../../icons/Star.svg";
+import { IStarViewProps } from './useStar';
 
-const ViewStar = (props) => {
+const ViewStar = (props: IStarViewProps) => {
     const { star, isView } = props;
     return (
         isView && (
